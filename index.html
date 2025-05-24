@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--flags-->
+    <link rel="stylesheet" href="
+https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+    <!--my css-->
+    <link rel="stylesheet" href="./content/css/main.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="titles">
+            <h1>Forex Exchange</h1>
+            <p class="sub-title">Check out the current price for a currency pair</p>
+        </div>
+        <div>
+            <div class="row justify-content-center main-container">
+                <div class="col-md-3 d-flex flex-column justify-content-center align-items-center select-container">
+                    <select name="" id="firstCurrency" class="dropDown ">
+                        <option value=""></option>
+                    </select>
+                    <select name="" id="secondCurrency" class="dropDown ">
+                        <option value=""></option>
+                    </select>
+                    <span id="currencyFetchingError"></span>
+                </div>
+                <div class="col-md-5 canvas-container">
+                    <div class="span-container d-flex">
+                        <div class="pe-2">
+                            <span id="firstCurrencyFlag" class="fi rounded-circle"></span>
+                        </div>
+                        <div class="pe-2">
+                            <span id="secondCurrencyFlag" class="fi  rounded-circle"></span>
+                        </div>
+                        <div>
+                            <span class="forex d-flex justify-content-center align-items-center">Forex.com</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p id="currencyPair"></p>
+                        <div>
+                            <span id="currencySymbol"></span>
+                            <span id="currencyQuote"></span>
+                            <p id="averageCurrency"></p>
+                        </div>
+
+                    </div>
+                    <div class="mb-2 fs-2">
+                        <span id="timeSeriesError"></span>
+                    </div>
+                    <canvas id="myChart"></canvas>
+                    <div class="buttons-container d-flex justify-content-between">
+                        <button class="btn" id="minutes">15M</button>
+                        <button class="btn" id="hour">1H</button>
+                        <button class="btn" id="day">1D</button>
+                        <button class="btn" id="week">1W</button>
+                        <button class="btn" id="month">1M</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./content/js/service.js"></script>
+    <script type="module" src="./content/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+main {
+  .titles {
+    margin-left: 19%;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+  .sub-title {
+    color: #7b808c;
+    font-weight: 700;
+  }
+  .main-container {
+    gap: 70;
+
+    .select-container {
+      gap: 1.25rem;
+      #currencyFetchingError {
+        font-weight: 600;
+        color: red;
+        font-size: 20px;
+      }
+      select {
+        border: 1px #e2e4e8 solid;
+        border-radius: 5px;
+        color: #7e7e82;
+        padding: 5px;
+      }
+    }
+    .canvas-container {
+      #firstCurrencyFlag,
+      #secondCurrencyFlag {
+        font-size: 24px;
+      }
+      #currencyQuote {
+        font-weight: 600;
+      }
+      #timeSeriesError {
+        color: red;
+        font-weight: 600;
+      }
+      #currencyPair {
+        font-weight: 700;
+      }
+      #averageCurrency {
+        color: #60d89c;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .forex {
+        color: #a0a5ae;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: #edeef0;
+        padding-inline: 10px;
+        border-radius: 17px;
+        width: fit-content;
+      }
+      padding-top: 10px;
+      margin-top: 20px;
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      .buttons-container {
+        margin-bottom: 10px;
+        button {
+          &:hover {
+            background-color: #dee9fc;
+            font-weight: 600;
+          }
+        }
+      }
+      canvas {
+        width: 100% !important;
+        margin-left: -12px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  select {
+    width: 75%;
+  }
+}
